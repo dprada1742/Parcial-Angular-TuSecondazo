@@ -17,5 +17,7 @@ export class VehiculoListComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getVehiculos();
+  }
 }
