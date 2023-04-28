@@ -17,6 +17,13 @@ export class VehiculoListComponent implements OnInit {
     });
   }
 
+  countByMarca(): { [key: string]: number } {
+    return this.vehiculos.reduce<{ [key: string]: number }>((acc, vehiculo) => {
+      acc[vehiculo.marca] = (acc[vehiculo.marca] || 0) + 1;
+      return acc;
+    }, {});
+  }
+
   ngOnInit() {
     this.getVehiculos();
   }

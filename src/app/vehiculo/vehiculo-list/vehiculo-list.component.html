@@ -16,3 +16,6 @@
     </tr>
   </tbody>
 </table>
+<div *ngFor="let count of countByMarca() | keyvalue">
+  <p>Total {{ count.key }}: {{ count.value }}</p>
+</div>
